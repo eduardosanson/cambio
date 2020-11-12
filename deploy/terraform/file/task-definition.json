@@ -1,0 +1,16 @@
+[
+  {
+    "essential": true,
+    "image": "${image}",
+    "memory": 512,
+    "memory_reservation": 128,
+    "name": "${name}",
+    "portMappings": [
+      {
+        "hostPort": 0,
+        "protocol": "tcp",
+        "containerPort": ${port}
+      }
+    ]
+  }
+]

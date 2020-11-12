@@ -9,7 +9,7 @@ public class Dinheiro {
 
     public Dinheiro(BigDecimal valor) {
         if (valor.longValue() < 0) throw new IllegalArgumentException("valor inválido");
-        this.valor = valor.setScale(2, RoundingMode.CEILING);
+        this.valor = valor.setScale(3, RoundingMode.CEILING);
     }
 
     public BigDecimal getValor() {

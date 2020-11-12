@@ -2,6 +2,7 @@ package com.br.cortex.cambio.infra.dto;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class TipoCotacaoMoeda {
 
@@ -56,8 +57,9 @@ public class TipoCotacaoMoeda {
         return dataHoraCotacao;
     }
 
-    public void setDataHoraCotacao(LocalDateTime dataHoraCotacao) {
-        this.dataHoraCotacao = dataHoraCotacao;
+    public void setDataHoraCotacao(String dataHoraCotacao) {
+        this.dataHoraCotacao = LocalDateTime.parse(dataHoraCotacao,
+                DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS"));
     }
 
     public String getTipoBoletim() {

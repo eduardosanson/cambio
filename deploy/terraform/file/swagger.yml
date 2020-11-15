@@ -1,0 +1,48 @@
+swagger: "2.0"
+info:
+  title: Cambio API
+  description: Aplicação para converter dinheiro
+paths:
+  /cambio/v1/converter:
+    get:
+      parameters:
+        - in:   query
+          name: moedaOrigem
+          description: ""
+          type: string
+        - in: query
+          name: moedaDestino
+          type: string
+        - in: query
+          name: valor
+          type: integer
+        - in: query
+          name: data
+          type: string
+      summary: Retorna o valor convertido.
+      description: ""
+      responses:
+        '200':
+          description: "'*'"
+          schema:
+            $ref: '#/definitions/CambioResponse'
+      security:
+        - api_key: [ ]
+      x-amazon-apigateway-integration:
+          uri: "http://${nlb_domain_name}:${nlb_listener_port}/cambio/v1/conversor"
+          responses:
+            default:
+              statusCode: "200"
+          passthroughBehavior: "when_no_match"
+          connectionType: "VPC_LINK"
+          connectionId: "${connectionId}"
+          httpMethod: "GET"
+          type: "http_proxy"
+definitions:
+  CambioResponse:
+    type: object
+    properties:
+      valorCompra:
+        type: number
+      valorVenda:
+        type: number

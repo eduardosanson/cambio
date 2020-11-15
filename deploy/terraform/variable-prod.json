@@ -1,7 +1,7 @@
 {
   "application_image"   : "sanson/cambio:0.0.1",
   "application_port"    : 8080,
-  "cluster_name"        : "ma",
+  "cluster_name"        : "cortex-prod",
   "application_name"    : "cambio-prod",
   "desired_count"       : 1,
   "health_check"        : "/actuator/health",

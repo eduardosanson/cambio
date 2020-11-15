@@ -1,1 +1,1 @@
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/eduardosanson/cambio/blob/feature/conversao-moeda/doc/image/architecture.png?raw=true)

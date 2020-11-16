@@ -1,5 +1,5 @@
 build-image:
-	 docker build . -t sanson/cambio:0.0.1
+	 docker build . -t sanson/cambio:0.0.2
 
 push-image:
-	docker push sanson/cambio:0.0.1
+	docker push sanson/cambio:0.0.2

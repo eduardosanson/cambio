@@ -1,10 +1,11 @@
 package com.br.cortex.cambio.infra.dto;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class TipoCotacaoMoeda {
+public class TipoCotacaoMoeda implements Serializable {
 
     private BigDecimal paridadeCompra;
 

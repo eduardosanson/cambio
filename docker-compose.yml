@@ -1,14 +1,9 @@
 version: "2"
 
 services:
-#  db:
-#    image: postgres
-#    ports:
-#      - "5432:5432"
-#    environment:
-#      POSTGRES_USER: "cambio"
-#      POSTGRES_PASSWORD: "6RCEGQmA"
-#      POSTGRES_DB: "cambiodb"
+  redis:
+    image: redis:5.0.3
+    network_mode: host
   app:
     image: sanson/cambio:0.0.1
     network_mode: host

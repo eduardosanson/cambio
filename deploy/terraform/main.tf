@@ -52,23 +52,6 @@ module "alb-target-group" {
   health_check_path = var.health_check
 }
 
-module "nlb" {
-  source = "github.com/eduardosanson/terraform-template-modules//modules/lb?ref=master"
-  sg_id           = data.terraform_remote_state.init-infra.outputs.sg
-  vpc_subnets     = data.terraform_remote_state.init-infra.outputs.public_subnet
-  lb-type         = "network"
-  lb-name         = var.application_name
-}
-
-module "nlb-target-group" {
-  source = "./modules/lb-target-group"
-  load_balancer_arn = module.nlb.lb_arn
-  vpc_id            = data.terraform_remote_state.init-infra.outputs.vpc_id
-  target_group_name = var.application_name
-  lb_port_redirect  = var.application_port
-  protocol          = "TCP"
-}
-
 module "service" {
   source = "github.com/eduardosanson/terraform-template-modules//modules/ecs-container-service/service?ref=master"
   role_execution_arn      = module.role.ecs-execution-role-arn
@@ -80,15 +63,6 @@ module "service" {
   container_image         = var.application_image
   lb_port_redirect        = var.application_port
   task_defination_path    = var.task_definition_path
-}
-
-module "api-gw" {
-  source = "./modules/api-gw"
-  application_name = var.application_name
-  swagger_path = "file/swagger.yml"
-  nlb_domain_name = data.terraform_remote_state.cluster.outputs.lb_dns
-  nlb_listener_port = var.application_port
-  lb_arn = module.nlb.lb_arn
 }
 
 module "sqs" {

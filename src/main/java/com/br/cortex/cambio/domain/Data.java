@@ -12,7 +12,7 @@ public class Data {
         this.value = value;
     }
 
-    public String value(){
+    public String asString(){
         return this.value.format(formatter);
     }
 }

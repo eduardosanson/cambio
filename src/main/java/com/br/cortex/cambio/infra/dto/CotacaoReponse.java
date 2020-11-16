@@ -1,8 +1,9 @@
 package com.br.cortex.cambio.infra.dto;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class CotacaoReponse {
+public class CotacaoReponse implements Serializable {
 
     private List<TipoCotacaoMoeda> value;
 

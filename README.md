@@ -1,1 +1,1 @@
-![alt text](https://github.com/eduardosanson/cambio/blob/feature/conversao-moeda/doc/image/architecture.png?raw=true)
+![alt text](https://github.com/eduardosanson/cambio/blob/feature/conversao-moeda/doc/image/arquitetura.png?raw=true)

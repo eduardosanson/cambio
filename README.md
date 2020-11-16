@@ -1,11 +1,17 @@
 # Cambio API
 Cambio Api é uma aplicação que faz conversões entre moedas 
 
+- [Cambio API](#Cambio API)
+    - [Requisitos](#requisitos)
+    - [Documentação](#documentao)
+    - [Instalação](#instalao)
+    - [Deploy](#deploy)
+
 ### Aquitetura
 ![alt text](https://github.com/eduardosanson/cambio/blob/feature/conversao-moeda/doc/image/arquitetura.png?raw=true)
 
 
-### Reuqisitos
+### Requisitos
 É necessário ter instalado a openjdk 11 e docker instalados na máquina.
 
 ### Documentação

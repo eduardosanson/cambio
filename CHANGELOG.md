@@ -12,7 +12,8 @@ Escrever atualizações importantes feitas de maneira reduzida.
 - Nova subnet privada com saida apenas pelo nat gateway
 - LB na subnet pública
 - Criação de um Route 53 
-- Novo Roteador de borda http/https para a aplicação. 
+- Novo Roteador de borda http/https para a aplicação.
+- Criar um autenticador de usuário no redis
 
 ### Fixed
 - Tratamento de erro para o cliente do banco central.

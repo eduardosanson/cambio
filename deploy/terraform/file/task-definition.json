@@ -11,6 +11,12 @@
         "protocol": "tcp",
         "containerPort": ${port}
       }
+    ],
+    "environment": [
+      {
+        "name": "SPRING_PROFILES_ACTIVE",
+        "value": "prod"
+      }
     ]
   }
 ]

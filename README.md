@@ -8,11 +8,18 @@ Cambio Api é uma aplicação que faz conversões entre moedas
     - [Deploy](#deploy)
 
 ### Aquitetura
+Foram usados duas filas, sendo uma como mensagens com prioridade e um DLQ para as mensagens que não tiveram erro, com o
+cloud watch monitorar a fila de prioridade para escalar com o ecs, também existe um cloud watch que analisa o cluster 
+para saber se a existem recursos suficientes de acordo com o configurado, o ambiente é configurado com duas subnets para
+para ter duas zonas de disponibilidade assim se existirem dois containers cada um fica em uma, a aplicação usa o 
+elasticache com um cluster redis com replicação com um auto fail over que tambem usa essas subnets para distribuir 
+entre as zonas e um Application Load Balancer para rotear para a aplicação.   
+ 
 ![alt text](https://github.com/eduardosanson/cambio/blob/feature/conversao-moeda/doc/image/arquitetura.png?raw=true)
 
 
 ### Requisitos
-É necessário ter instalado a openjdk 11 e docker instalados na máquina.
+É necessário ter instalado a openjdk 11 e docker na máquina.
 
 ### Documentação
 Algumas informação sobre como a aplicação está documentada 
@@ -59,3 +66,10 @@ make deploy-prod
     ├── traget
     |   ├── cambio-<versão>.jar       # Aqui fica o artefato para a criação da imagem docker                 
     └── ...
+    
+### Execução local
+É necessário ter o docker instalado na máquina. Para executar o servidor localmente basta executar o comando abaixo:
+
+```shell script
+make run-local
+```

@@ -5,10 +5,10 @@ spring:
   cache:
     type: redis
     redis:
-      time-to-live: 3000000
+      time-to-live: 10
   redis:
-    host: ${CACHE_HOST:cortex.8xmvap.clustercfg.use1.cache.amazonaws.com}
-    port: ${CACHE_PORT:6379}
+    host: localhost
+    port: 6379
 
 clients:
   BCB:

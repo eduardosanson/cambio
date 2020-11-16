@@ -1,0 +1,9 @@
+variable "application_name"     {type = string}
+variable "cluster_name"         {type = string}
+variable "application_image"    {type = string}
+variable "health_check"         {type = string}
+variable "task_definition_path" {type = string}
+variable "application_port"     {type = number}
+variable "desired_count"        {type = number}
+variable "max_capacity"         {type = number}
+variable "min_capacity"         {type = number}

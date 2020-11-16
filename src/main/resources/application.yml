@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  cache:
+    type: redis
+    redis:
+      time-to-live: 3000000
+  redis:
+    host: ${CACHE_HOST:cortex.8xmvap.clustercfg.use1.cache.amazonaws.com}
+    port: ${CACHE_PORT:6379}
+    password: ${REDIS_PASSWORD:}
+    cluster:
+      nodes:
+        - cortex-0002-001.8xmvap.0001.use1.cache.amazonaws.com:6379
+        - cortex-0002-002.8xmvap.0001.use1.cache.amazonaws.com:6379
+
+
+
+
+clients:
+  BCB:
+    host: "https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata"

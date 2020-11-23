@@ -16,6 +16,22 @@
       {
         "name": "SPRING_PROFILES_ACTIVE",
         "value": "prod"
+      },
+      {
+        "name": "CACHE_HOST",
+        "value": "cortex.8xmvap.clustercfg.use1.cache.amazonaws.com"
+      },
+      {
+        "name": "CACHE_PORT",
+        "value": "6379"
+      },
+      {
+        "name": "NODE_1",
+        "value": "cortex-0001-001.8xmvap.0001.use1.cache.amazonaws.com:6379"
+      },
+      {
+        "name": "NODE_2",
+        "value": "cortex-0001-002.8xmvap.0001.use1.cache.amazonaws.com:6379"
       }
     ]
   }

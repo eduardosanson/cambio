@@ -9,8 +9,8 @@ spring:
   redis:
     cluster:
       nodes:
-        - cortex-0002-001.8xmvap.0001.use1.cache.amazonaws.com:6379
-        - cortex-0002-002.8xmvap.0001.use1.cache.amazonaws.com:6379
+        - ${NODE_1:cortex-0001-001.8xmvap.0001.use1.cache.amazonaws.com:6379}
+        - ${NODE_2:cortex-0001-002.8xmvap.0001.use1.cache.amazonaws.com:6379}
 
 clients:
   BCB:

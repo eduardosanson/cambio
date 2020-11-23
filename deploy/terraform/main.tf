@@ -62,7 +62,7 @@ module "service" {
   container_name          = var.application_name
   container_image         = var.application_image
   lb_port_redirect        = var.application_port
-  task_defination_path    = var.task_definition_path
+  task_definition_path    = var.task_definition_path
 }
 
 module "sqs" {

@@ -1,6 +1,6 @@
 package com.br.cortex.cambio.api.web.response;
 
-import com.br.cortex.cambio.domain.Dinheiro;
+import com.br.cortex.cambio.application.domain.model.Dinheiro;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

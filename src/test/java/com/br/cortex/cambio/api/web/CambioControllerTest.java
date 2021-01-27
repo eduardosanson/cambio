@@ -1,10 +1,9 @@
 package com.br.cortex.cambio.api.web;
 
-import com.br.cortex.cambio.application.CambioServiceApplication;
-import com.br.cortex.cambio.domain.Cambio;
-import com.br.cortex.cambio.domain.Dinheiro;
-import com.br.cortex.cambio.domain.Moeda;
-import org.junit.jupiter.api.Test;
+import com.br.cortex.cambio.application.domain.model.Cambio;
+import com.br.cortex.cambio.application.domain.model.Dinheiro;
+import com.br.cortex.cambio.application.domain.model.Moeda;
+import com.br.cortex.cambio.application.usecase.CambiarMoeda;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -31,7 +30,7 @@ class CambioControllerTest {
     private MockMvc mockMvc;
 
     @MockBean
-    private CambioServiceApplication cambioServiceApplication;
+    private CambiarMoeda cambioServiceApplication;
 
 //    @Test
     public void shouldReturnDefaultMessage() throws Exception {

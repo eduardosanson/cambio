@@ -1,4 +1,4 @@
-package com.br.cortex.cambio.domain;
+package com.br.cortex.cambio.application.domain.model;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

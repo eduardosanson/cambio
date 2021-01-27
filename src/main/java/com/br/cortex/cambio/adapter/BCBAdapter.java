@@ -1,26 +1,23 @@
-package com.br.cortex.cambio.infra.service;
+package com.br.cortex.cambio.adapter;
 
-import com.br.cortex.cambio.application.cambio.ICotacao;
-import com.br.cortex.cambio.domain.Data;
-import com.br.cortex.cambio.domain.Dinheiro;
-import com.br.cortex.cambio.domain.Moeda;
-import com.br.cortex.cambio.infra.client.BCBClient;
-import com.br.cortex.cambio.infra.dto.TipoCotacaoMoeda;
+import com.br.cortex.cambio.application.domain.model.Data;
+import com.br.cortex.cambio.application.domain.model.Dinheiro;
+import com.br.cortex.cambio.application.domain.model.Moeda;
+import com.br.cortex.cambio.application.port.BCPort;
+import com.br.cortex.cambio.adapter.client.BCBClient;
+import com.br.cortex.cambio.adapter.dto.TipoCotacaoMoeda;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
-import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
 
-@Service
-public class CotacaoService implements ICotacao {
+public class BCBAdapter implements BCPort {
 
     @Autowired
     private BCBClient bcbClient;
 
-    private static final Logger LOG = LoggerFactory.getLogger(CotacaoService.class);
+    private static final Logger LOG = LoggerFactory.getLogger(BCBAdapter.class);
 
     @Override
     public Moeda converter(String codigo, Data data) {

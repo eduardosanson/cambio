@@ -1,11 +1,12 @@
 package com.br.cortex.cambio.infra.service;
 
-import com.br.cortex.cambio.domain.Data;
-import com.br.cortex.cambio.domain.Dinheiro;
-import com.br.cortex.cambio.domain.Moeda;
-import com.br.cortex.cambio.infra.client.BCBClient;
-import com.br.cortex.cambio.infra.dto.CotacaoReponse;
-import com.br.cortex.cambio.infra.dto.TipoCotacaoMoeda;
+import com.br.cortex.cambio.adapter.BCBAdapter;
+import com.br.cortex.cambio.application.domain.model.Data;
+import com.br.cortex.cambio.application.domain.model.Dinheiro;
+import com.br.cortex.cambio.application.domain.model.Moeda;
+import com.br.cortex.cambio.adapter.client.BCBClient;
+import com.br.cortex.cambio.adapter.dto.CotacaoReponse;
+import com.br.cortex.cambio.adapter.dto.TipoCotacaoMoeda;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.platform.runner.JUnitPlatform;
@@ -30,7 +31,7 @@ import static org.mockito.Mockito.when;
 class CotacaoServiceTest {
 
     @InjectMocks
-    private CotacaoService cotacaoService;
+    private BCBAdapter cotacaoService;
 
     @Mock
     private BCBClient bcbClient;

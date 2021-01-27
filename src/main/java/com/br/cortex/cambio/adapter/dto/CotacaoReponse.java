@@ -1,4 +1,4 @@
-package com.br.cortex.cambio.infra.dto;
+package com.br.cortex.cambio.adapter.dto;
 
 import java.io.Serializable;
 import java.util.List;

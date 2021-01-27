@@ -1,6 +1,6 @@
-package com.br.cortex.cambio.infra.client;
+package com.br.cortex.cambio.adapter.client;
 
-import com.br.cortex.cambio.infra.dto.CotacaoReponse;
+import com.br.cortex.cambio.adapter.dto.CotacaoReponse;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;

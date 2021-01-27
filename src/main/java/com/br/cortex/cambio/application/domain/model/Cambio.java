@@ -1,6 +1,4 @@
-package com.br.cortex.cambio.domain;
-
-import java.math.BigDecimal;
+package com.br.cortex.cambio.application.domain.model;
 
 public class Cambio {
 

@@ -110,6 +110,9 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+					<profiles>
+						<profile>local</profile>
+					</profiles>
 					<executable>true</executable>
 				</configuration>
 			</plugin>
